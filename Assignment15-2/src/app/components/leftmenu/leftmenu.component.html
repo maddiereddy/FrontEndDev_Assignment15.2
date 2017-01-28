@@ -1,0 +1,31 @@
+<!--
+Created a left-sided navbar which is collapsible, by toggling the navbar-toggler button
+To have the navbar shown, have the `class="collapse show"`
+Used router for page navigation
+Used routerLinkActive="active" to show active link (in red)
+The container displays the selected page
+Each page displays the string retrieved from the TestService in addition to its own personalized text
+-->
+
+<nav class="navbar navbar-inverse bg-inverse">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+</nav>
+<div class="collapse show" id="navbarToggleExternalContent">
+  <div class="navbar navbar-inverse bg-inverse navbar-fixed-left">
+    <a class="navbar-brand" href="/">Bazaar</a>
+    <ul class="nav navbar-nav">
+      <li><a routerLink="home" routerLinkActive="active">Home</a></li>
+      <li><a routerLink="courses" routerLinkActive="active">Courses</a></li>
+      <li><a routerLink="about" routerLinkActive="active">About Us</a></li>
+      <li><a routerLink="contact" routerLinkActive="active">Contact Us</a></li>
+    </ul>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <router-outlet></router-outlet>
+  </div>
+</div>
+
